@@ -1,0 +1,177 @@
+﻿html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+/* ... existing code ... */
+
+.landing-page {
+    background-color: #f8f9fa;
+}
+
+.hero-section {
+    padding: 100px 0;
+    background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('../images/hero-bg.jpg') center/cover;
+}
+
+.feature-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+    .feature-card:hover {
+        transform: translateY(-5px);
+    }
+
+.cta-buttons {
+    margin-top: 2rem;
+}
+
+.btn-lg {
+    padding: 15px 30px;
+    border-radius: 30px;
+}
+
+/* ... existing code ... */
+
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playfair+Display:wght@700&display=swap');
+
+.landing-page {
+    background-color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero-section {
+    padding: 80px 0;
+    background: #ffffff;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    padding-right: 2rem;
+}
+
+.main-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(45deg, #2563eb, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.lead {
+    font-size: 1.25rem;
+    color: #4b5563;
+    margin-bottom: 2rem;
+}
+
+.cta-buttons {
+    margin-top: 2rem;
+}
+
+.btn-lg {
+    padding: 0.875rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, #2563eb, #3b82f6);
+    border: none;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.2);
+}
+
+    .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(37, 99, 235, 0.3);
+    }
+
+.btn-outline-primary {
+    border: 2px solid #2563eb;
+    color: #2563eb;
+}
+
+    .btn-outline-primary:hover {
+        background: linear-gradient(45deg, #2563eb, #3b82f6);
+        border-color: transparent;
+        transform: translateY(-2px);
+    }
+
+.map-container {
+    position: relative;
+    padding: 20px;
+}
+
+.animated-map {
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+    .animated-map:hover {
+        transform: translateY(-10px);
+    }
+
+.feature-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+    .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .feature-card i {
+        background: linear-gradient(45deg, #2563eb, #3b82f6);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-content {
+        padding-right: 0;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .cta-buttons {
+        justify-content: center;
+    }
+}
+

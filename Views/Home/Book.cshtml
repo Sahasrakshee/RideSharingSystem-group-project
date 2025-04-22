@@ -1,0 +1,39 @@
+﻿@model RideSharingSystem.Models.Ride
+
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-header">
+            <h2 class="mb-0">Book Ride</h2>
+        </div>
+        <div class="card-body">
+            <dl class="row">
+                <dt class="col-sm-3">Start Location</dt>
+                <dd class="col-sm-9">@Model.StartLocation</dd>
+
+                <dt class="col-sm-3">End Location</dt>
+                <dd class="col-sm-9">@Model.EndLocation</dd>
+
+                <dt class="col-sm-3">Available Seats</dt>
+                <dd class="col-sm-9">@Model.AvailableSeats</dd>
+
+                <dt class="col-sm-3">Price</dt>
+                <dd class="col-sm-9">Rs. @Model.Price.ToString("F2")</dd>
+
+                <dt class="col-sm-3">Driver</dt>
+                <dd class="col-sm-9">@Model.Driver?.Name</dd>
+            </dl>
+
+            <form asp-action="BookConfirmed" class="mt-4">
+                <input type="hidden" asp-for="Id" />
+                <div class="form-group">
+                    <button type="submit" class="btn btn-success me-2">
+                        <i class="fas fa-check"></i> Confirm Booking
+                    </button>
+                    <a asp-action="RideList" class="btn btn-secondary">
+                        <i class="fas fa-arrow-left"></i> Back to List
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

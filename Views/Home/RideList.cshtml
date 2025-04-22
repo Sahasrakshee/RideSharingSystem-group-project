@@ -1,0 +1,53 @@
+﻿@model IEnumerable<RideSharingSystem.Models.Ride>
+
+@{
+    ViewData["Title"] = "Available Rides";
+}
+
+<h2>Available Rides</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Start Location</th>
+            <th>End Location</th>
+            <th>Available Seats</th>
+            <th>Price (Rs)</th>
+            <th>Driver</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null && Model.Any())
+        {
+            foreach (var ride in Model)
+            {
+                <tr>
+                    <td>@ride.StartLocation</td>
+                    <td>@ride.EndLocation</td>
+                    <td>@ride.AvailableSeats</td>
+                    <td>Rs @ride.Price.ToString("F2")</td>
+                    <td>@(ride.Driver?.Name ?? "Unknown")</td>
+                    <td>
+                        <div class="btn-group">
+                            <a asp-action="Book" asp-route-id="@ride.Id" class="btn btn-success btn-sm">Book</a>
+                            <a asp-action="Details" asp-route-id="@ride.Id" class="btn btn-info btn-sm">Details</a>
+                            <a asp-action="Edit" asp-route-id="@ride.Id" class="btn btn-primary">Edit</a>
+                            <a asp-action="Delete" asp-route-id="@ride.Id" class="btn btn-danger">Delete</a>
+                        </div>
+                    </td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="6" class="text-center">No rides found</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div>
+    <a asp-action="Create" class="btn btn-primary">Create New Ride</a>
+</div>

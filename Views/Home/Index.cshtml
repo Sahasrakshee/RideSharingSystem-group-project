@@ -1,0 +1,64 @@
+﻿@{
+    ViewData["Title"] = "Welcome to RideShare";
+}
+
+<div class="landing-page">
+    <div class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Left side content -->
+                <div class="col-md-6 hero-content">
+                    <h1 class="main-title mb-4">Welcome to RideShare</h1>
+                    <p class="lead mb-5">Your trusted platform for convenient and affordable rides</p>
+                    <div class="cta-buttons d-flex flex-column flex-sm-row gap-3">
+                        <a asp-controller="Home" asp-action="RideList" class="btn btn-primary btn-lg">View Available Rides</a>
+                        <a asp-controller="Home" asp-action="Create" class="btn btn-outline-primary btn-lg">Offer a New Ride</a>
+                    </div>
+                </div>
+                <!-- Right side map image -->
+                <div class="col-md-6 hero-image">
+                    <div class="map-container">
+                        <img src="~/images/map-illustration.png" alt="Map illustration" class="img-fluid animated-map">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="features-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card text-center p-4">
+                        <i class="fas fa-car fa-3x mb-3 text-primary"></i>
+                        <h3>Safe Rides</h3>
+                        <p>All our drivers are verified and rated by the community</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card text-center p-4">
+                        <i class="fas fa-dollar-sign fa-3x mb-3 text-primary"></i>
+                        <h3>Best Prices</h3>
+                        <p>Competitive prices and split costs with other passengers</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card text-center p-4">
+                        <i class="fas fa-clock fa-3x mb-3 text-primary"></i>
+                        <h3>24/7 Service</h3>
+                        <p>Find rides anytime, anywhere with our platform</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Styled Give Feedback Card -->
+            <div class="col-md-12 mb-4 mx-auto">
+                <!-- Changed to col-md-12 for full width -->
+                <div class="feature-card text-center p-4">
+                    <h3>Give Feedback</h3>
+                    <p>Your opinion matters! Let us know how we can improve.</p>
+                    <a asp-controller="Home" asp-action="Feedback" class="btn btn-secondary btn-lg">Give Feedback</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

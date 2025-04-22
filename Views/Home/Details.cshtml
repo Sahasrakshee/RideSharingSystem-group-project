@@ -1,0 +1,26 @@
+﻿@model RideSharingSystem.Models.Ride
+
+<h2>Ride Details</h2>
+
+<div>
+    <dl class="row">
+        <dt class="col-sm-2">Start Location</dt>
+        <dd class="col-sm-10">@Model.StartLocation</dd>
+
+        <dt class="col-sm-2">End Location</dt>
+        <dd class="col-sm-10">@Model.EndLocation</dd>
+
+        <dt class="col-sm-2">Available Seats</dt>
+        <dd class="col-sm-10">@Model.AvailableSeats</dd>
+
+        <dt class="col-sm-2">Price</dt>
+        <dd class="col-sm-10">Rs. @Model.Price</dd>
+
+        <dt class="col-sm-2">Driver</dt>
+        <dd class="col-sm-10">@Model.Driver?.Name</dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Edit</a>
+    <a asp-action="RideList" class="btn btn-secondary">Back to List</a>
+</div>
