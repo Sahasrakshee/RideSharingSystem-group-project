@@ -1,2 +1,1 @@
-# RideSharingSystem-group-project
-6th sem group project on ride sharing system
+Simple CRUD operation for a Ride Sharing App in MVC Framework of .NET
